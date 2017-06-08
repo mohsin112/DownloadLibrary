@@ -84,7 +84,13 @@ class ImageDownloader: NSObject {
            return //no reason to do anything is requests not exist
         }
         //removing request
-        reqArray!.remove(at: reqArray!.index(of: fetchRequest)!)
+        let index = reqArray!.index(of: fetchRequest)!
+        if(index == -1)
+        {
+            return
+        }
+        
+        reqArray!.remove(at: index)
         hashRequests[fetchRequest.urlStr] = reqArray!
         
         //cheking is size goes to zero . here we need to remove task as well

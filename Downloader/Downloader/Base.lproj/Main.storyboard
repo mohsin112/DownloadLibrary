@@ -61,16 +61,29 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pQV-Ii-v0E"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attaching new page data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aok-AY-aWc">
+                                <rect key="frame" x="92.5" y="607" width="190.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Yp-Nj-J02"/>
+                                    <constraint firstAttribute="width" constant="190.5" id="635-q4-Kfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Y0s-Yd-EM2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6fg-Kp-Aau"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Y0s-Yd-EM2" secondAttribute="bottom" id="Gr3-8M-pBH"/>
+                            <constraint firstItem="aok-AY-aWc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kqb-Re-3qq"/>
                             <constraint firstItem="Y0s-Yd-EM2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S1m-Hz-zcx"/>
                             <constraint firstAttribute="trailing" secondItem="Y0s-Yd-EM2" secondAttribute="trailing" id="aFL-W4-K3H"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aok-AY-aWc" secondAttribute="bottom" constant="20" id="qIz-B7-dtg"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingLabel" destination="aok-AY-aWc" id="0go-Oa-Ayc"/>
                         <outlet property="tableView" destination="Y0s-Yd-EM2" id="jqd-Ph-Vdd"/>
                         <segue destination="XE9-AR-x2H" kind="presentation" identifier="showBigImage" modalPresentationStyle="overCurrentContext" modalTransitionStyle="flipHorizontal" id="cxs-R8-QFk"/>
                     </connections>
