@@ -184,8 +184,10 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             DispatchQueue.global().async {
                 sleep(1)
                 self.imageURLList = self.getRecordsTillPage(pageNo: self.pageNumber)
-                self.loadingLabel.isHidden = true
-                self.tableView.reloadData()
+                DispatchQueue.main.async {
+                    self.loadingLabel.isHidden = true
+                    self.tableView.reloadData()
+                }
             }
         }
     }
