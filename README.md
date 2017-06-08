@@ -1,6 +1,12 @@
 # DownloadLibrary
 Swift 3.1 library.  
 
+* USAGE Instructions.
+Please start with DownloadManager for using the library.
+
+
+Problem
+
 Imagine you are on the Pinterest iOS team and you are working with some colleagues on the pinboard (the scrolling wall of images), you split up the tasks among each other and your task is to create an image loading library that will be used to asynchronously download the images for the pins on the pinboard when they are needed.
 
 The library will also be useful for all other parts of the app where asynchronous remote image loading is required. The images are available on a publicly accessible URL (like a CDN). The library should be general purpose and not assume anything about the use case, the pinboard is an example but other parts of the app that show images will also use it (e.g. a user's profile pic on the profile screen).
