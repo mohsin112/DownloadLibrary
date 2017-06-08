@@ -35,13 +35,26 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet var tableView:UITableView!
     static let cellIdentifier = "ListCellIdentifier"
     
-    
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        self.refreshControl = UIRefreshControl()
+        
+        self.refreshControl.tintColor = UIColor.black
+        self.refreshControl.addTarget(self,
+                                      action: #selector(ListViewController.pullToRefreshHandler),
+                                      for: .valueChanged)
+        
+        self.tableView.addSubview(self.refreshControl)
     }
+    
+    @objc func pullToRefreshHandler() {
+        self.tableView.reloadData()
+        self.refreshControl.endRefreshing()
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -63,6 +76,19 @@ class ListViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        self.performSegue(withIdentifier: "showBigImage", sender: nil)
+    }
+    
+  //prepare for segue
+    private var selectedIndex:Int = -1
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let zoomCtl:ImageZoomViewController = segue.destination as! ImageZoomViewController
+        zoomCtl.imageURL = imageURLList[selectedIndex]
+    }
+
 
 }
 

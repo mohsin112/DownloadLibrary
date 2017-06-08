@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C80FD8CA1EE95D6600D61830 /* ImageZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80FD8C91EE95D6600D61830 /* ImageZoomViewController.swift */; };
 		C892B7191EE94AA2002605B1 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C892B7181EE94AA2002605B1 /* ListTableViewCell.swift */; };
 		C892B7291EE94AF5002605B1 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C892B71C1EE94AF5002605B1 /* ImageCache.swift */; };
 		C892B72A1EE94AF5002605B1 /* JSONCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C892B71D1EE94AF5002605B1 /* JSONCache.swift */; };
@@ -24,7 +25,6 @@
 		C8B440961EE7451100A6CA9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B440951EE7451100A6CA9F /* Assets.xcassets */; };
 		C8B440991EE7451100A6CA9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B440971EE7451100A6CA9F /* LaunchScreen.storyboard */; };
 		C8B440A41EE7451100A6CA9F /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B440A31EE7451100A6CA9F /* DownloaderTests.swift */; };
-		C8F28D571EE88B680080BFDC /* device.png in Resources */ = {isa = PBXBuildFile; fileRef = C8F28D561EE88B680080BFDC /* device.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C80FD8C91EE95D6600D61830 /* ImageZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageZoomViewController.swift; sourceTree = "<group>"; };
 		C892B7181EE94AA2002605B1 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		C892B71C1EE94AF5002605B1 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		C892B71D1EE94AF5002605B1 /* JSONCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONCache.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		C8B4409F1EE7451100A6CA9F /* DownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B440A31EE7451100A6CA9F /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
 		C8B440A51EE7451100A6CA9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8F28D561EE88B680080BFDC /* device.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = device.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,10 +155,10 @@
 				C892B7181EE94AA2002605B1 /* ListTableViewCell.swift */,
 				C8B4408D1EE7451100A6CA9F /* ListViewController.swift */,
 				C8B4408F1EE7451100A6CA9F /* Main.storyboard */,
-				C8F28D561EE88B680080BFDC /* device.png */,
 				C8B440951EE7451100A6CA9F /* Assets.xcassets */,
 				C8B440971EE7451100A6CA9F /* LaunchScreen.storyboard */,
 				C8B4409A1EE7451100A6CA9F /* Info.plist */,
+				C80FD8C91EE95D6600D61830 /* ImageZoomViewController.swift */,
 			);
 			path = Downloader;
 			sourceTree = "<group>";
@@ -258,7 +258,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8B440991EE7451100A6CA9F /* LaunchScreen.storyboard in Resources */,
-				C8F28D571EE88B680080BFDC /* device.png in Resources */,
 				C8B440961EE7451100A6CA9F /* Assets.xcassets in Resources */,
 				C8B440911EE7451100A6CA9F /* Main.storyboard in Resources */,
 			);
@@ -287,6 +286,7 @@
 				C892B72B1EE94AF5002605B1 /* Constants.swift in Sources */,
 				C892B72D1EE94AF5002605B1 /* JSONDownloader.swift in Sources */,
 				C8B4408C1EE7451100A6CA9F /* AppDelegate.swift in Sources */,
+				C80FD8CA1EE95D6600D61830 /* ImageZoomViewController.swift in Sources */,
 				C892B7191EE94AA2002605B1 /* ListTableViewCell.swift in Sources */,
 				C892B7311EE94AF5002605B1 /* ImageObject.swift in Sources */,
 				C892B7301EE94AF5002605B1 /* JSONFetchRequest.swift in Sources */,

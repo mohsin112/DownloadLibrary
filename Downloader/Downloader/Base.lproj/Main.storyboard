@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -71,11 +72,68 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Y0s-Yd-EM2" id="jqd-Ph-Vdd"/>
+                        <segue destination="XE9-AR-x2H" kind="presentation" identifier="showBigImage" modalPresentationStyle="overCurrentContext" modalTransitionStyle="flipHorizontal" id="cxs-R8-QFk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+        </scene>
+        <!--Image Zoom View Controller-->
+        <scene sceneID="nBt-Ft-7Uv">
+            <objects>
+                <viewController id="XE9-AR-x2H" customClass="ImageZoomViewController" customModule="Downloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8it-8Q-WHE"/>
+                        <viewControllerLayoutGuide type="bottom" id="lQJ-0e-1yW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y3D-pb-XDY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ong-Yq-bIc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.51372549020000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usS-Nf-qIn">
+                                <rect key="frame" x="281" y="28" width="78" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="f8A-E3-AY9"/>
+                                    <constraint firstAttribute="height" constant="45" id="ynD-3g-Qu3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButon:" destination="XE9-AR-x2H" eventType="touchUpInside" id="Atg-IJ-8Va"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KEO-8o-lDH">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="usS-Nf-qIn" firstAttribute="top" secondItem="8it-8Q-WHE" secondAttribute="bottom" constant="8" id="0Z7-a7-rqu"/>
+                            <constraint firstItem="Ong-Yq-bIc" firstAttribute="top" secondItem="8it-8Q-WHE" secondAttribute="bottom" id="CJX-n7-IeG"/>
+                            <constraint firstAttribute="trailing" secondItem="Ong-Yq-bIc" secondAttribute="trailing" id="LPj-0b-0zS"/>
+                            <constraint firstItem="usS-Nf-qIn" firstAttribute="trailing" secondItem="Y3D-pb-XDY" secondAttribute="trailingMargin" id="duz-LQ-gDP"/>
+                            <constraint firstItem="lQJ-0e-1yW" firstAttribute="top" secondItem="Ong-Yq-bIc" secondAttribute="bottom" id="eba-wC-XoP"/>
+                            <constraint firstItem="Ong-Yq-bIc" firstAttribute="leading" secondItem="Y3D-pb-XDY" secondAttribute="leading" id="mp4-QE-aLb"/>
+                            <constraint firstItem="KEO-8o-lDH" firstAttribute="centerY" secondItem="Y3D-pb-XDY" secondAttribute="centerY" id="sR9-aW-KrY"/>
+                            <constraint firstItem="KEO-8o-lDH" firstAttribute="centerX" secondItem="Y3D-pb-XDY" secondAttribute="centerX" id="t8L-Z7-YfO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actIndicator" destination="KEO-8o-lDH" id="aBi-C1-PL4"/>
+                        <outlet property="imageViewmain" destination="Ong-Yq-bIc" id="ddu-vc-U7z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDX-07-VsM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.60000000000002" y="36.431784107946029"/>
         </scene>
     </scenes>
 </document>
